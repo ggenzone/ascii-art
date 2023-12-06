@@ -7,7 +7,6 @@ image1.src = 'https://images.squarespace-cdn.com/content/v1/590242a9725e25e24aeb
 
 const inputSlider = document.getElementById('resolution')
 const inputLabel = document.getElementById('resolutionLabel')
-console.log(inputLabel, inputSlider)
 inputSlider.addEventListener('change', handleSlider)
 
 class Cell {
