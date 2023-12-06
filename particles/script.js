@@ -22,8 +22,8 @@ window.addEventListener('mousemove', function (event) {
 ctx.font = '30px Verdana'
 ctx.fillStyle = 'white'
 ctx.fillText('Labs', 0, 40) 
-ctx.strokeStyle = 'white'
-ctx.strokeRect(0,0,100,100)
+//ctx.strokeStyle = 'white'
+//ctx.strokeRect(0,0,80,80)
 const textCoordinates = ctx.getImageData(0,0,100,100)
 
 
