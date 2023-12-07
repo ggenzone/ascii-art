@@ -35,10 +35,11 @@ class Particle {
         this.baseX = this.x
         this.baseY = this.y
         this.density = (Math.random() * 40) + 5
+        this.color = 'white'
     }
 
     draw() {
-        ctx.fillStyle = 'yellow'
+        ctx.fillStyle = this.color
         ctx.beginPath()
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
         ctx.fill()
@@ -55,10 +56,16 @@ class Particle {
         let directionX = forceDirectionX * force * this.density
         let directionY = forceDirectionY * force * this.density
         if (distance < mouse.radius) {
+            const mapDistanceToColor = (((force * 127) + 128))
+            const red = 0
+            const green = mapDistanceToColor
+            const blue = 0
+            this.color = `rgb(${red}, ${green}, ${blue})`
             this.x -= directionX
             this.y -= directionY
             // this.size = 30
         } else {
+            this.color = 'white'
             if (this.x !== this.baseX) {
                 let dx = this.x - this.baseX
                 this.x -= dx/10
