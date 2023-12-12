@@ -4,10 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canvas related effects</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background-color: #f0f0f0;
+        }
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+        }
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+        }
+        .effect {
+          background-color: #fff;
+          border: 1px solid #ccc;
+          padding: 20px;
+          text-align: center;
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease-in-out;
+        }
+        .effect:hover {
+          transform: translateY(-5px);
+        }
+        .effect a {
+          text-decoration: none;
+          color: #333;
+        }
+      </style>
 </head>
 <body>
-    <a href="ascii/index.html">Ascii-Art</a>
-    <a href="rain/index.html">Particle Rain</a>
-    <a href="particles/index.html">Particle Text</a>
+    <h1>Canvas Effects</h1>
+    <br />
+    <div class="container">
+        <div class="grid">
+
+            <div class="effect">
+            <a href="rain/index.html">
+                <h2>Pixel Rain</h2>
+                <p>Load an image and generate a cascade of particles that form the image, slowing down their velocity as brighter colors emerge.</p>
+            </a>
+            </div>
+            <div class="effect">
+            <a href="particles/index.html">
+                <h2>Particle Text</h2>
+                <p>Generate text using small particles, connecting them with lines based on proximity. On mouse hover, create a repelling effect on particles, returning to original positions when the mouse moves away.</p>
+            </a>
+            </div>
+            <div class="effect">
+                <a href="ascii/index.html">
+                <h2>Ascii Art</h2>
+                <p>Translates images into ASCII characters, creating visual representations using text-based characters.</p>
+                </a>
+            </div>
+        </div>        
+    </div>
 </body>
 </html>
